@@ -1,0 +1,77 @@
+{
+  "continue": {
+    "rvcontinue": "20240726045511|1236710833",
+    "continue": "||"
+  },
+  "query": {
+    "pages": {
+      "12240": {
+        "pageid": 2440,
+        "ns": 0,
+        "title": "Gold",
+        "revisions": [
+          {
+            "user": "3df",
+            "timestamp": "2024-09-14T07:25:13Z"
+          },
+          {
+            "user": "Northern-Virginia-Photographer",
+            "timestamp": "2024-09-11T18:04:51Z"
+          },
+          {
+            "user": "Doug butler",
+            "timestamp": "2024-08-29T22:34:07Z"
+          },
+          {
+            "user": "3df",
+            "timestamp": "2024-08-28T20:23:59Z"
+          },
+          {
+            "user": "3df",
+            "timestamp": "2024-08-28T19:40:46Z"
+          },
+          {
+            "user": "InternetArchiveBot",
+            "timestamp": "2024-08-20T21:15:51Z"
+          },
+          {
+            "user": "DMacks",
+            "timestamp": "2024-08-10T20:56:15Z"
+          },
+          {
+            "user": "Legoplanecrash5383",
+            "timestamp": "2024-08-10T20:51:53Z"
+          },
+          {
+            "user": "Grendon84",
+            "timestamp": "2024-08-09T16:28:51Z"
+          },
+          {
+            "user": "Kku",
+            "timestamp": "2024-08-08T06:38:19Z"
+          },
+          {
+            "user": "Moonreach",
+            "timestamp": "2024-08-07T13:53:11Z"
+          },
+          {
+            "user": "Alisperic",
+            "timestamp": "2024-08-07T06:16:03Z"
+          },
+          {
+            "user": "RDH Sir",
+            "timestamp": "2024-08-05T19:54:00Z"
+          },
+          {
+            "user": "Doug butler",
+            "timestamp": "2024-07-30T16:25:06Z"
+          },
+          {
+            "user": "Citation bot",
+            "timestamp": "2024-07-28T21:59:33Z"
+          }
+        ]
+      }
+    }
+  }
+}

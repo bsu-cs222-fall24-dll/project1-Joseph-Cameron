@@ -6,22 +6,18 @@ import java.net.URLConnection;
 import java.net.URLEncoder;
 import java.nio.charset.Charset;
 import java.util.Scanner;
-
-
 public class PickUserPage {
     private static Scanner scanner = new Scanner(System.in);
-
     public static void main(String[] args) throws IOException {
-
         URLConnection connection = connectToWikipedia();
         String jsonData = readJsonAsStringFrom(connection);
         printRawJson(jsonData);
     }
+
     private static URLConnection connectToWikipedia() throws IOException {
         String wikiName;
         System.out.println("Enter Wikipedia Page Name");
-        wikiName = scanner.nextLine();
-
+        wikiName= scanner.nextLine();
         String encodedUrlString = "https://en.wikipedia.org/w/api.php?action=query&format=json&prop=revisions&titles=" +
                 URLEncoder.encode(wikiName, Charset.defaultCharset()) +
                 "&rvprop=timestamp|user&rvlimit=15&redirects"
