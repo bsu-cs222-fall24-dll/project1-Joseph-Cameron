@@ -12,7 +12,7 @@ import java.util.Objects;
 
 
 
-public class TestWiki {
+public class TestPickUserPage {
 
         @Test
         public void testAccessToJsonFile() throws IOException {

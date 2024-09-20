@@ -1,0 +1,18 @@
+{
+  "batchcomplete": "",
+  "query": {
+    "normalized": [
+      {
+        "from": "njnwfi",
+        "to": "Njnwfi"
+      }
+    ],
+    "pages": {
+      "-1": {
+        "ns": 0,
+        "title": "Njnwfi",
+        "missing": ""
+      }
+    }
+  }
+}
