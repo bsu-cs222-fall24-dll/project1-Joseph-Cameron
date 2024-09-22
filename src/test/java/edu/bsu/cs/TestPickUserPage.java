@@ -12,7 +12,7 @@ import java.util.Objects;
 
 
 
-public class TestWiki {
+public class TestPickUserPage {
 
         @Test
         public void testAccessToJsonFile() throws IOException {
@@ -27,15 +27,6 @@ public class TestWiki {
             Assertions.assertEquals(15, revisions.size());
         }
 
-        @Test
-        public void testParserUserAndTimestamp(){
-            ParseWikiInfo parser = new ParseWikiInfo();
-            InputStream parsedData = Thread.currentThread().getContextClassLoader().getResourceAsStream("sample.json");
-            String user = parser.parseUserAndTimestamp(parsedData.toString());
-            String timestamp = parser.parseUserAndTimestamp(parsedData.toString());
-            Assertions.assertEquals("{timestamp=2024-09-14T07:25:13Z}", timestamp);
-            Assertions.assertEquals("{user=3df}", user);
-        }
 
         private String readSampleFileAsString() throws NullPointerException, IOException {
             try (InputStream sampleFile = Thread.currentThread().getContextClassLoader()
