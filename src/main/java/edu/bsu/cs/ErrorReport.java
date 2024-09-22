@@ -1,4 +1,5 @@
 package edu.bsu.cs;
+
 import net.minidev.json.JSONArray;
 
 import java.net.URL;
@@ -6,7 +7,7 @@ import java.net.URL;
 public class ErrorReport {
     public static String emptyPage(String wikiName) {
         if (wikiName.isEmpty()) {
-            System.err.println("Invalid Characters: ");
+            System.err.println("Empty String Error ");
             System.exit(0);
         }
         return wikiName;
@@ -29,4 +30,5 @@ public class ErrorReport {
             System.exit(0);
         }
     }
+
 }
