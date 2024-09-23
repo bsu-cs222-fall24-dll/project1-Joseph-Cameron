@@ -3,7 +3,7 @@ package edu.bsu.cs;
 import net.minidev.json.JSONArray;
 
 import java.net.URL;
-
+//Class and methods from Alec-Timothy
 public class ErrorReport {
     public static String emptyPage(String wikiName) {
         if (wikiName.isEmpty()) {
@@ -14,12 +14,11 @@ public class ErrorReport {
     }
     public static void missingPage(String jsonData) {
         try {
-            JSONArray parsedData = ParseWikiInfo.parseMissingData(jsonData);
-            if (parsedData.getFirst().toString().isEmpty()) {
+            JSONArray missingData = ParseWikiInfo.parseMissingData(jsonData);
+            if (!missingData.isEmpty()) {
                 System.err.println("\nMissing Page");
                 System.exit(0);
             }
-            System.out.println(parsedData);
         } catch (Exception ignored) {}
     }//end missingPage
     protected static void NetWorkConnect(URL url) {
