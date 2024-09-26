@@ -11,7 +11,7 @@ import javafx.scene.layout.VBox;
 import static com.jayway.jsonpath.internal.PathRef.createRoot;
 import static javafx.application.Application.launch;
 
-public class UI {
+public class UI extends Main{
     public static void main(String[] args) {
         launch(args);
     }
@@ -22,6 +22,7 @@ public class UI {
 
     @Override
     public void start(Stage primaryStage) {
+        new Controller(this);
         outPutField.setEditable(false);
         configure(primaryStage);
     }
@@ -34,9 +35,9 @@ public class UI {
     }
 
     private Pane createRoot() {
-        Vbox root= new Vbox();
+        VBox root= new VBox();
         root.getChildren().add(inputField);
-        root.getChildren().add();
+        root.getChildren().add(wikiButton);
         root.getChildren().add(outPutField);
         return root;
     }
