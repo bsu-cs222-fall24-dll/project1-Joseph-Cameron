@@ -3,6 +3,7 @@ package edu.bsu.cs;
 import javafx.application.Application;
 import javafx.fxml.FXML;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
@@ -23,6 +24,7 @@ public class UI extends Application {
 
     public final TextField wikiInputField = new TextField();
     public final TextArea outputTextArea = new TextArea();
+    @FXML
     Button fetchButton = new Button("Fetch Revisions");
     @Override
     public void start(Stage primaryStage) {
@@ -62,6 +64,7 @@ public class UI extends Application {
 
         if (wikiPage.isEmpty()) {
             outputTextArea.setText("Please enter a valid Wikipedia page name.");
+            guiAlert("Empty Entry Alert", "Please Enter something");
         } else {
             try {
                 String jsonData = PickUserPage.readJsonAsStringFrom(
@@ -74,8 +77,15 @@ public class UI extends Application {
             } catch (IOException e) {
                 outputTextArea.setText("Error fetching Wikipedia data: " + e.getMessage());
             } catch (Exception e) {
-                outputTextArea.setText("Unexpected error: " + e.getMessage());
+                guiAlert("Network Error Alert", "Network Error, Please Connect");
             }
         }
+    }
+    private void guiAlert(String title, String message) {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle(title);
+        alert.setHeaderText(null);
+        alert.setContentText(message);
+        alert.showAndWait();
     }
 }
