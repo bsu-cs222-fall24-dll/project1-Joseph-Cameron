@@ -1,6 +1,5 @@
 package edu.bsu.cs;
 
-import javafx.stage.Stage;
 import net.minidev.json.JSONArray;
 
 import java.io.IOException;
@@ -9,8 +8,7 @@ import java.net.URLConnection;
 import static edu.bsu.cs.WikiConnect.connectToWikipedia;
 
 
-public abstract class Main extends PickUserPage {
-
+public class Main extends PickUserPage {
     public static void main(String[] args) throws IOException {
         PickUserPage userPage = new PickUserPage();
         ParseWikiInfo parseWikiInfo = new ParseWikiInfo();
