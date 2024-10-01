@@ -14,20 +14,6 @@ public class PickUserPage {
         System.out.println("Enter Wikipedia Page Name");
         return ErrorReport.emptyPage(scanner.nextLine());
     }
-
-    static URLConnection connectToWikipedia(String wikiName) throws IOException {
-        String encodedUrlString = "https://en.wikipedia.org/w/api.php?action=query&format=json&prop=revisions&titles=" +
-                URLEncoder.encode(wikiName, Charset.defaultCharset()) +
-                "&rvprop=timestamp|user&rvlimit=15&redirects";
-        URL url = new URL(encodedUrlString);
-        ErrorReport.NetWorkConnect(url);
-        URLConnection connection = url.openConnection();
-        connection.setRequestProperty("User-Agent",
-                "CS222FirstProject1 (joseph.sobiech@bsu.edu, cameron.hosler@bsu.edu)");
-        connection.connect();
-        return connection;
-    }
-
     static String readJsonAsStringFrom(URLConnection connection) throws IOException {
         return new String(connection.getInputStream().readAllBytes(), Charset.defaultCharset());
     }
