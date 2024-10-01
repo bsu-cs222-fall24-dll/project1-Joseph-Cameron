@@ -23,5 +23,4 @@ public abstract class Main extends PickUserPage {
 
     }
 
-    public abstract void start(Stage primaryStage);
 }

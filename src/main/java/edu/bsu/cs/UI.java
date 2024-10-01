@@ -13,7 +13,6 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.net.URLConnection;
 
-import static com.jayway.jsonpath.internal.PathRef.createRoot;
 
 public class UI extends Application {
 
@@ -23,7 +22,10 @@ public class UI extends Application {
 
     public final TextField wikiInputField = new TextField();
     public final TextArea outputTextArea = new TextArea();
+    @FXML
     Button fetchButton = new Button("Fetch Revisions");
+
+
     @Override
     public void start(Stage primaryStage) {
         configure(primaryStage);
