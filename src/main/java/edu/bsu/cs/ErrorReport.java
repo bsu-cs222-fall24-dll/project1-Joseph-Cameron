@@ -1,8 +1,8 @@
 package edu.bsu.cs;
 
 import net.minidev.json.JSONArray;
-
 import java.net.URL;
+
 //Class and methods from Alec-Timothy
 public class ErrorReport {
     public static String emptyPage(String wikiName) {
@@ -12,6 +12,7 @@ public class ErrorReport {
         }
         return wikiName;
     }
+
     public static void missingPage(String jsonData) {
         try {
             JSONArray missingData = ParseWikiInfo.parseMissingData(jsonData);
@@ -21,6 +22,7 @@ public class ErrorReport {
             }
         } catch (Exception ignored) {}
     }//end missingPage
+
     protected static void NetWorkConnect(URL url) {
         try {
             url.openConnection().connect();
@@ -29,5 +31,4 @@ public class ErrorReport {
             System.exit(0);
         }
     }
-
 }

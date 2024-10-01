@@ -10,9 +10,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
-
 import java.io.IOException;
-import java.net.URLConnection;
 
 
 public class UI extends Application {
@@ -26,20 +24,20 @@ public class UI extends Application {
     @FXML
     Button fetchButton = new Button("Fetch Revisions");
 
-
     @Override
     public void start(Stage primaryStage) {
         configure(primaryStage);
         configureGetRevisionsButton();
         wikiInputField.setPromptText("Enter Wikipedia Page Name");
-
     }
+
     private void configure(Stage stage) {
         stage.setTitle("Get Info");
         stage.setScene(new Scene(createRoot()));
         stage.sizeToScene();
         stage.show();
     }
+
     private Pane createRoot() {
         VBox root = new VBox();
         root.getChildren().add(wikiInputField);
@@ -59,8 +57,9 @@ public class UI extends Application {
             }
         });//borrowed from Manning and Johnson
     }
+
     private void getWikiRevisions() throws IOException {
-        URLConnection connection = PickUserPage.connectToWikipedia(wikiInputField.getText());
+        PickUserPage.connectToWikipedia(wikiInputField.getText());
         String wikiPage = wikiInputField.getText();
 
         if (wikiPage.isEmpty()) {
@@ -69,8 +68,7 @@ public class UI extends Application {
         } else {
             try {
                 String jsonData = PickUserPage.readJsonAsStringFrom(
-                        PickUserPage.connectToWikipedia(wikiPage)
-                );
+                        PickUserPage.connectToWikipedia(wikiPage));
 
                 String parsedInfo = new ParseWikiInfo().parseUserAndTimestamp(jsonData);
                 String redirectInfo = new ParseWikiInfo().parseRedirect(jsonData);
@@ -82,6 +80,7 @@ public class UI extends Application {
             }
         }
     }
+
     private void guiAlert(String title, String message) {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle(title);

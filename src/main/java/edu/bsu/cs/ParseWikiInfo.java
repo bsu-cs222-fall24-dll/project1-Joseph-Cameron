@@ -31,5 +31,4 @@ public class ParseWikiInfo extends PickUserPage {
         //method Idea Borrowed from burch-smith project
         return JsonPath.read(jsonData, "$..missing");
     }
-
 }
