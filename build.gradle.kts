@@ -1,3 +1,5 @@
+
+
 plugins {
     id("java")
     id("application")
@@ -30,5 +32,5 @@ javafx {
     modules("javafx.controls", "javafx.fxml")
 }
 application {
-    mainClass.set("edu.bsu.cs.Main")
+    mainClass.set("edu.bsu.cs.UI")
 }
