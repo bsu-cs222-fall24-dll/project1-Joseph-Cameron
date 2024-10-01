@@ -1,12 +1,13 @@
 package edu.bsu.cs;
 
+import javafx.stage.Stage;
 import net.minidev.json.JSONArray;
 
 import java.io.IOException;
 import java.net.URLConnection;
 
 
-public class Main extends PickUserPage {
+public abstract class Main extends PickUserPage {
     public static void main(String[] args) throws IOException {
         PickUserPage userPage = new PickUserPage();
         ParseWikiInfo parseWikiInfo = new ParseWikiInfo();
@@ -22,4 +23,5 @@ public class Main extends PickUserPage {
 
     }
 
+    public abstract void start(Stage primaryStage);
 }

@@ -1,7 +1,7 @@
 plugins {
     id("java")
     id("application")
-    id ("org.openjfx.javafxplugin") version "0.0.13"
+    id("org.openjfx.javafxplugin") version "0.0.13"
 }
 
 group = "edu.bsu.cs"
@@ -20,6 +20,7 @@ dependencies {
     implementation ("net.minidev:json-smart:2.5.0")
     implementation("com.jayway.jsonpath:json-path:2.9.0")
     implementation("org.slf4j:slf4j-nop:2.0.11")
+
 }
 
 tasks.test {
@@ -27,8 +28,8 @@ tasks.test {
 }
 javafx {
     version = "22"
-    modules("javafx.controls", "javafx.fxml")
+    modules ("javafx.controls", "javafx.fxml")
 }
 application {
-    mainClass.set("edu.bsu.cs.Main")
+    mainClass.set("edu.bsu.cs.UI")
 }
